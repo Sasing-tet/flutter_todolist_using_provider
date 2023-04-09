@@ -6,9 +6,9 @@ import 'package:uuid/uuid.dart';
 class TodosProvider extends ChangeNotifier {
   List<Todo> _todos = [
     Todo(
-      createdTime: DateTime.now(),
-      title: 'TEST 1',
-    ),
+        createdTime: DateTime.now(),
+        title: 'TEST 1',
+        description: '- test 1 description'),
     Todo(
       createdTime: DateTime.now(),
       title: 'TEST 2 LETSGO',
@@ -16,11 +16,12 @@ class TodosProvider extends ChangeNotifier {
     Todo(
       createdTime: DateTime.now(),
       title: 'AAAAAAAAAAA',
+      description: 'neat\nself-retrospecting\ntest description',
     ),
     Todo(
-      createdTime: DateTime.now(),
-      title: '>>>> 1234@#op',
-    ),
+        createdTime: DateTime.now(),
+        title: '>>>> 1234@#op',
+        description: '??? 123\n///>SD\nfishing\nrandom words'),
   ];
 
   List<Todo> get todos => _todos.where((todo) => todo.isDone == false).toList();
